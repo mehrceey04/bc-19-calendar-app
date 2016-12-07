@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: #00000f;
     color: white;
 }
 table {
@@ -11,15 +11,30 @@ select {
 form{
     margin-left: 120px;
 }
-.title {
+
+#submit {
+    margin-left: 120px;
+}
+header {
     height: 60px;
     width: 100%;
     font-size: 45px;
     color: white;
     text-indent: 20px;
     text-align: center;
+    font-family: Tangerine;
+    background-color: #00000f;
+    margin-top: 20px;
+}
+footer {
+    height: 15px;
+    width: 100%;
+    font-size: 25px;
+    color: black;
+    text-indent: 20px;
+    text-align: center;
     font-family: copperplate gothic light;
-    background-color: black;
+    background-color: white;
 }
 
 .nav li {
@@ -123,4 +138,49 @@ ul.nav.nav-pills {
     width: 13.6%;
     color: #666;
     text-align: center;
+}
+.form-2 {
+    /* Size and position */
+    width: 340px;
+    margin: 60px auto 6px auto;
+    padding: 15px;
+    position: relative;
+
+    /* Styles */
+    background: #FFFFFF;
+    border-radius: 4px;
+    color: #000000;
+    box-shadow:
+        0 0px 1px ,        
+        0 1px 1px ,        
+        0 0 0 1px ;
+    
+}
+
+.form-2 label {
+    display: block;
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.form-2 label i {
+    margin-right: 5px; /* Gap between icon and text */
+    display: inline-block;
+    width: 10px;
+}
+
+.form-2 input[type=text],
+.form-2 input[type=password] {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 3px solid #ebe6e2;
+    border-radius: 5px;
 }

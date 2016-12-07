@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <title>Home page</title>
         <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
         <script type = "text/javascript" src = "javascript/calendarmonth.js"></script>
         <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
+        <title>Home Page</title>
     </head>
-    <body onload="setToday()" >
-        <div class = "title">MEHRCEEY CALENDAR APP</div>
+    <body onload="setToday()">
+       
+        <header>MEHRCEEY CALENDAR APP</header>
         
             <div>
                 <ul class = "nav nav-pills">
@@ -64,6 +66,22 @@
             <button name = "previousYear" onClick = "setNextYear()" class="btn btn-success">Next Year</button>
         </div>
         <div id = "relod">
+
+                
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDfVbknxo0VHriexPkM5V1YxZX7kFHe3ig",
+    authDomain: "calendar-app-b8c5e.firebaseapp.com",
+    databaseURL: "https://calendar-app-b8c5e.firebaseio.com",
+    storageBucket: "calendar-app-b8c5e.appspot.com",
+    messagingSenderId: "392587604762"
+  };
+  firebase.initializeApp(config);
+  
+</script>
+
             <script type = "text/javascript">selectDate();</script>
         </div>
     </body>

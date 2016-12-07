@@ -69,8 +69,7 @@
 
     function initCalendar() {
       curDate = moment();
-      curWeekBeginDate = moment();
-      curWeekEndDate = moment();
+      curWeekBeginDate = momentz      curWeekEndDate = moment();
 
       // get day of week
       curWeekBeginDate.startOf("week");

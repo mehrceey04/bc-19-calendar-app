@@ -125,7 +125,7 @@ function calendar(Month, Year) {
     // Higlight the current day.
     
     if(currentDate == day_counter && currentMonth == Month && currentYear == parseInt(Year)){
-      calendar_html += '<td class="month-day" style = "text-align: center; background-color:green;" onclick ="addTask(this)" data="'+Year +"|"+ Month+ "|"+ day_counter+'"><b>' + day_counter + '</b></td>';}
+      calendar_html += '<td class="month-day" style = "text-align: center; background-color: lightgreen;" onclick ="addTask(this)" data="'+Year +"|"+ Month+ "|"+ day_counter+'"><b>' + day_counter + '</b></td>';}
     else{
       calendar_html += '<td class="month-day" style = "background-color:9999cc; color:000000; text-align: center;" onclick ="addTask(this)" data="'+Year +"|"+ Month+ "|"+ day_counter+'">' + day_counter + ' </td>';
     }
