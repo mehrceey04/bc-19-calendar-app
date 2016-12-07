@@ -1,0 +1,113 @@
+body {
+    background-color: black;
+    color: white;
+}
+table {
+    color: black;
+
+}
+.title {
+    height: 60px;
+    width: 100%;
+    font-size: 45px;
+    color: white;
+    text-indent: 20px;
+    text-align: center;
+    font-family: copperplate gothic light;
+    background-color: black;
+}
+
+.nav li {
+    display: inline;
+}
+ul.nav.nav-pills {
+    text-align: right;
+    color: black;
+}
+
+.nav-pills>li {
+    float: none;
+    display: inline-block;
+}
+
+
+#date_nav {
+    clear: both;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+#calendar_table {
+    background-color:#ccd0d0; 
+    color:ffffff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    
+}
+.yeartable {
+    
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #EEEEEE;
+    height: 180px;
+    width: 210px;
+    border: 2px solid black;
+    padding: ;
+}
+.monthtable tbody tr  {
+    height: 50px;
+}
+#weektable {
+    margin-left: 350px;
+}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}

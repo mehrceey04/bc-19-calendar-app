@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                
+
+        <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
+        <script type = "text/javascript" src ="javascript/calendaryear.js"></script>
+        <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
+        <style>
+        table {
+                width: 200px; 
+                height: 200px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "title">MEHRCEEY CALENDAR APP </div>
+            <div>
+                <ul style="text-align: right">
+                    <a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
+                    <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
+                    <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>   
+                </ul>
+            </div>
+                    <select id = "selectElementId" name = "year" onChange = "refresh();"></select>
+                        <script type = "text/javascript">
+                            var min = 1900,
+                            max = 2100,
+                            select = document.getElementById('selectElementId');
+                            for (var i = min; i <= max; i ++){
+                            var opt = document.createElement('option');
+                            opt.value = i;
+                            opt.innerHTML = i;
+                            select.appendChild(opt);
+                            }
+                            select.value = new Date().getFullYear();
+                        </script>
+        
+                <button name = "previousYear" onClick = "setPreviousYear()" class='btn btn-success'>Prev. Year</button>
+                
+                <button name = "previousYear" onClick = "setNextYear()" class='btn btn-success'>Next Year</button>
+            
+        
+        <div id = "monthlyCal" style = "margin-left: 350px;">
+            <script type = "text/javascript">refresh ();</script>
+        </div>
+    </body>
+</html>
