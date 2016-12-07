@@ -4,7 +4,12 @@ body {
 }
 table {
     color: black;
-
+}
+select {
+    text-align: left;
+}
+form{
+    margin-left: 120px;
 }
 .title {
     height: 60px;
@@ -66,6 +71,14 @@ ul.nav.nav-pills {
 }
 .monthtable tbody tr  {
     height: 50px;
+}
+
+.month-day:hover {
+    background-color: #b3b3b3;
+}
+
+.month-day {
+    cursor: pointer;
 }
 #weektable {
     margin-left: 350px;

@@ -68,7 +68,11 @@ function selectDate() {
   calendar(month, year);
 }
 
-
+function addTask(element) {
+  var day = element.getAttribute('data')
+  localStorage.setItem("task_date", day);
+  window.open('file:///C:/Users/HalimatMercy/bootcamp-projects/calendarApp/add-task.html')
+}
 
 function calendar(Month, Year) {
   // If no parameter is passed use the current date.
@@ -116,16 +120,14 @@ function calendar(Month, Year) {
   for(day_counter = 1; day_counter <= days_in_this_month; day_counter++) {
     week_day %= 7;
     if(week_day == 0)
-      calendar_html += '</tr><tr>';
+      calendar_html += '</tr><tr>'; 
 
     // Higlight the current day.
     
     if(currentDate == day_counter && currentMonth == Month && currentYear == parseInt(Year)){
-
-         console.log('day_counter',day_counter, 'currentDate', currentDate, Month, parseInt(Year));
-      calendar_html += '<td style = "text-align: center; background-color:green;"><b>' + day_counter + '</b></td>';}
+      calendar_html += '<td class="month-day" style = "text-align: center; background-color:green;" onclick ="addTask(this)" data="'+Year +"|"+ Month+ "|"+ day_counter+'"><b>' + day_counter + '</b></td>';}
     else{
-      calendar_html += '<td style = "background-color:9999cc; color:000000; text-align: center;"> ' + day_counter + ' </td>';
+      calendar_html += '<td class="month-day" style = "background-color:9999cc; color:000000; text-align: center;" onclick ="addTask(this)" data="'+Year +"|"+ Month+ "|"+ day_counter+'">' + day_counter + ' </td>';
     }
 
     week_day++;
