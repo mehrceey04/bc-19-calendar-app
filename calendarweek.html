@@ -17,11 +17,27 @@
         <!-- Bootstrap Timepicker -->
         <link href="bower_components/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet">        
         <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
-
-        
-        
+        <!--<style>
+            body {
+                background:url("images/mobile-design.jpg");
+                background-repeat: repeat-x repeat-y;
+            }
+        </style>-->
+        <style>
+            header {
+                height: 70px;
+                width: 100%;
+                font-size: 55px;
+                color: black;
+                text-indent: 20px;
+                text-align: center;
+                font-family: Georgia;
+                background-color: #ffffff;
+                margin-top: auto;
+            }
+        </style>
     </head>
-    <body>
+    <body style="background-color:#00000f;">
         <header>MEHRCEEY CALENDAR APP</header>
             <div>
                 <ul class = "nav nav-pills">
@@ -32,7 +48,7 @@
                 </ul>
             </div>
         <div class="container">
-            <h3 style="color:white;">Week of</h3>
+            <h3 style="color:white;">Week of <span id="week-title"></span></h3>
             <div style="padding-bottom:15px;">
                 <button onclick="prevWeek();" class='btn btn-success'>Prev</button>
                 <button onclick="nextWeek();" class='btn btn-success'>Next</button>

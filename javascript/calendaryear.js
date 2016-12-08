@@ -1,5 +1,5 @@
-function myCreateFunction() {
-  var year =document.getElementById("selectElementId").value;
+function createCalendar() {
+  var year =document.getElementById("getYear").value;
   var table = document.createElement("table");
   var row = table.insertRow(0);
   var cell1 = row.insertCell(0);
@@ -28,37 +28,36 @@ function myCreateFunction() {
   cell10.innerHTML = calendar(9, year);
   cell11.innerHTML = calendar(10, year);
   cell12.innerHTML = calendar(11, year);
-  return table.outerHTML;
-    
+  return table.outerHTML;   
 }
 
 function refresh (){ 
-  document.getElementById("monthlyCal").innerHTML = myCreateFunction();
+  document.getElementById("yearlyCal").innerHTML = createCalendar();
 }
 
 function setToday() {
   var now   = new Date();
   var year  = now.getYear();
-  document.getElementById("selectElementId").value = year;
+  document.getElementById("getYear").value = year;
   refresh();
 }
 
 function setPreviousYear() {
-  var year  = document.getElementById("selectElementId").value;
+  var year  = document.getElementById("getYear").value;
   year--;
-  document.getElementById("selectElementId").value = year;
+  document.getElementById("getYear").value = year;
   refresh();
 }
 
 function setNextYear() {
-  var year = document.getElementById("selectElementId").value;
+  var year = document.getElementById("getYear").value;
   year++;
-  document.getElementById("selectElementId").value = year;
+  document.getElementById("getYear").value = year;
   refresh();
 }
 
 function selectDate() {
-  var year = document.getElementById("selectElementId").value ;
+  var year = document.getElementById("getYear").value ;
   calendar(month, year);
 }
 
@@ -96,7 +95,7 @@ function calendar(Month, Year) {
     days_in_this_month = daysInAMonth[month];
     }
   calendar_html = '<table style = "background-color:#ffffff;">';
-  calendar_html += '<tr style = "border: 4px solid black;"><td colspan = "10" style="background-color:#ffffff; color:#000000; text-align: center;">' +'<strong>' + months[month] + ' ' + year + '</strong>' + '</td></tr>';
+  calendar_html += '<tr style = "border: 2px solid black;"><td colspan = "7" style="background-color:#ffffff; color:#000000; text-align: center;">' +'<strong>' + months[month] + ' ' + year + '</strong>' + '</td></tr>';
   calendar_html += '<tr style = "text-align: center ;"><td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thur</td><td>Fri</td><td>Sat</td></tr>';
   calendar_html += '<tr>';
 

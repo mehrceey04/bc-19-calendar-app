@@ -1,7 +1,4 @@
-body {
-    background-color: #00000f;
-    color: green;
-}
+
 table {
     color: black;
 }
@@ -16,15 +13,15 @@ form{
     margin-left: 120px;
 }
 header {
-    height: 60px;
+    height: 70px;
     width: 100%;
-    font-size: 45px;
+    font-size: 55px;
     color: white;
     text-indent: 20px;
     text-align: center;
-    font-family: Tangerine;
+    font-family: Georgia;
     background-color: #00000f;
-    margin-top: 20px;
+    margin-top: auto;
 }
 footer {
     height: 15px;

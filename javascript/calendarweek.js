@@ -1,7 +1,7 @@
     // globals
     var calendar = [];
     var curDate;
-    var curWeekBeginDate; // sunday of the week
+    var curWeekBeginDate; // sunday 
     var curWeekEndDate    // saturday
 
 
@@ -36,11 +36,8 @@
     }
 
     function renderCalendar() {
-       
 
         renderWeekTitle();
-
-       
 
         var scheduleHTML = '<tr class="active">' +
                               '<td>Time</td>';
@@ -51,8 +48,6 @@
           iterateDate.add(1, 'day');
         };
         scheduleHTML += '</tr>';
-
-       
 
         // two cells per hour
         for (var i = 0; i < 49; i++) {
@@ -69,7 +64,8 @@
 
     function initCalendar() {
       curDate = moment();
-      curWeekBeginDate = momentz      curWeekEndDate = moment();
+      curWeekBeginDate = moment();
+      curWeekEndDate = moment();
 
       // get day of week
       curWeekBeginDate.startOf("week");
