@@ -8,7 +8,6 @@
         <title>Home Page</title>
     </head>
     <body onload="setToday()">
-       
         <header>MEHRCEEY CALENDAR APP</header>
         
             <div>
@@ -22,41 +21,41 @@
         <div class = "container">
         </div>
         <div style = "width: 100%">
-                    <table style="margin-left: 40px;" CELLPADDING = 0 CELLSPACING = 0 BORDER = 0>
-                        <tr><td COLSPAN = 7>
-                            <select id = "monthValue" NAME = "month" onChange = "refresh();">
-                                <option value = 0>JANUARY</option>
-                                <option value = 1>FEBRUARY</option>
-                                <option value = 2>MARCH</option>
-                                <option value = 3>APRIL</option>
-                                <option value = 4>MAY</option>
-                                <option value = 5>JUNE</option>
-                                <option value = 6>JULY</option>
-                                <option value = 7>AUGUST</option>
-                                <option value = 8>SEPTEMBER</option>
-                                <option value = 9>OCTOBER</option>
-                                <option value = 10>NOVEMBER</option>
-                                <option value = 11>DECEMBER</option>
-                                </select></li>
-                            </td>
-                            <td>
-                            <select id = "selectElementId" name = "year" onChange = "refresh();"></select>
-                            </td>
-                                <script type = "text/javascript">
-                                    var min = 1900,
-                                    max = 2100,
-                                    select = document.getElementById('selectElementId');
-                                    for (var i = min; i<=max; i++){
-                                    var opt = document.createElement('option');
-                                    opt.value = i;
-                                    opt.innerHTML = i;
-                                    select.appendChild(opt);
-                                    }
-                                    select.value = new Date().getFullYear();
-                                    </script>
+            <table style="margin-left: 40px;" cellpadding = 0 cellspacing = 0 border = 0>
+                <tr><td colspan = 7>
+                    <select id = "monthValue" NAME = "month" onChange = "refresh();">
+                        <option value = 0>JANUARY</option>
+                        <option value = 1>FEBRUARY</option>
+                        <option value = 2>MARCH</option>
+                        <option value = 3>APRIL</option>
+                        <option value = 4>MAY</option>
+                        <option value = 5>JUNE</option>
+                        <option value = 6>JULY</option>
+                        <option value = 7>AUGUST</option>
+                        <option value = 8>SEPTEMBER</option>
+                        <option value = 9>OCTOBER</option>
+                        <option value = 10>NOVEMBER</option>
+                        <option value = 11>DECEMBER</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id = "selectYear" name = "year" onChange = "refresh();"></select>
+                    </td>
+                        <script type = "text/javascript">
+                            var min = 1900,
+                                max = 2100,
+                                yearValue = document.getElementById('selectYear');
+                            for (var i = min; i <= max; i++){
+                                var opt = document.createElement('option');
+                                opt.value = i;
+                                opt.innerHTML = i;
+                                yearValue.appendChild(opt);
+                            }
+                                yearValue.value = new Date().getFullYear();
+                        </script>
                             
-                        </tr>
-                    </table>
+                </tr>
+            </table>
         </div>
         <div id = "date_nav">
             <button name = "previousYear" onClick = "setPreviousYear()" class="btn btn-success">Prev. Year</button>
@@ -65,24 +64,23 @@
             <button name = "previousYear" onClick = "setNextMonth()" class="btn btn-success">Next Month</button>
             <button name = "previousYear" onClick = "setNextYear()" class="btn btn-success">Next Year</button>
         </div>
-        <div id = "relod">
-
-                
-<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDfVbknxo0VHriexPkM5V1YxZX7kFHe3ig",
-    authDomain: "calendar-app-b8c5e.firebaseapp.com",
-    databaseURL: "https://calendar-app-b8c5e.firebaseio.com",
-    storageBucket: "calendar-app-b8c5e.appspot.com",
-    messagingSenderId: "392587604762"
-  };
-  firebase.initializeApp(config);
-  
-</script>
-
-            <script type = "text/javascript">selectDate();</script>
+        <div id = "reload">
         </div>
+<!--            
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDfVbknxo0VHriexPkM5V1YxZX7kFHe3ig",
+        authDomain: "calendar-app-b8c5e.firebaseapp.com",
+        databaseURL: "https://calendar-app-b8c5e.firebaseio.com",
+        storageBucket: "calendar-app-b8c5e.appspot.com",
+        messagingSenderId: "392587604762"
+    };
+    firebase.initializeApp(config);
+  
+    </script>
+-->
+    <script type = "text/javascript">selectDate();</script> 
     </body>
 </html>
