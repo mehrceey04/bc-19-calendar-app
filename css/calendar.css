@@ -23,14 +23,14 @@ header {
     margin-top: auto;
 }
 footer {
-    height: 15px;
+    height: 20px;
     width: 100%;
-    font-size: 25px;
-    color: black;
-    text-indent: 20px;
+    font-size: 15px;
+    color: white;
     text-align: center;
-    font-family: copperplate gothic light;
-    background-color: white;
+    font-family: Georgia;
+    background-color: black;
+    margin-top: 84px;
 }
 
 .nav li {
