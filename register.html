@@ -1,46 +1,45 @@
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Login</title>
-        <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/calendar.css"/>
-        <style>
-            body {
-                background:url("images/mobile-design.jpg");
-                background-repeat: repeat-x repeat-y;
-            }
-        </style>
-    </head>
-
-    <body>
-         <header>MEHRCEEY CALENDAR APP</header>
-            <div>
-                <ul class = "nav nav-pills">
-                    <div><a href="#" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
-        <a href="#" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
-        <a href="#" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
-                    </div>
-            </div>
-            <h2 class="form-2">Register</h2>
-       <form class="form-2">
-            
-                <p>
-                    <label for="login"><i class="icon-user"></i>Name</label>
-                    <input id="name" type="text" placeholder="Your full name">
-                </p>       
-                <p>
-                    <label for="login"><i class="icon-user"></i>Email Address</label>
-                    <input id="email" type="text" placeholder="Email">
-                </p>
-                <p >
-                    <label for="password"><i class="icon-lock"></i>Password</label>
-                    <input id="password" class="showpassword" type="password" placeholder="Password">
-                </p>
-                <p>
-                    <span onclick="return ''">   
-                        <button type="button" class='btn btn-success'>Submit</button>  
-                    </span>                              
-                </p>
-       </form>
-    </body>
+  <head>
+    <title>Login</title>
+    <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/calendar.css"/>
+    <style>
+      body {
+        background:url("images/mobile-design.jpg");
+        background-repeat: repeat-x repeat-y;
+      }
+    </style>
+  </head>
+  <body>
+    <header>MEHRCEEY CALENDAR APP</header>
+      <div>
+        <ul class = "nav nav-pills">
+          <div><a href="#" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
+          <a href="#" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
+          <a href="#" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
+          </div>
+        <ul>
+      </div>
+    <h2 class="form-2">Register</h2>
+    <form class="form-2">
+      <p>
+        <label for="login"><i class="icon-user"></i>Name</label>
+        <input id="name" type="text" placeholder="Your full name">
+      </p>       
+      <p>
+        <label for="login"><i class="icon-user"></i>Email Address</label>
+        <input id="email" type="text" placeholder="Email">
+      </p>
+      <p>
+        <label for="password"><i class="icon-lock"></i>Password</label>
+        <input id="password" class="showpassword" type="password" placeholder="Password">
+      </p>
+      <p>
+        <span onclick="return ''">   
+        <button type="button" class='btn btn-success'>Submit</button>  
+        </span>                              
+      </p>
+    </form>
+  </body>
 </html>

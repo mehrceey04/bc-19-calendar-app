@@ -126,4 +126,3 @@ function calendar(Month, Year) {
   // Display the calendar.
  return myCalendar;
 }
-

@@ -1,80 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calendar Year</title>
-        <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
-        <script type = "text/javascript" src ="javascript/displayTime.js"></script>
-        <script type = "text/javascript" src ="javascript/calendaryear.js"></script>
-        <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
-        <style>
-        table {
-                width: 230px; 
-                height: 220px;
-                margin: 5px;
-                padding: 10px 10px;
-            }
-        body {
-                background:url("images/mobile-design.jpg");
-                background-repeat: repeat-x repeat-y;
-                color: black;
-            }
-            header {
-                height: 70px;
-                width: 100%;
-                font-size: 55px;
-                color: white;
-                text-indent: 20px;
-                text-align: center;
-                font-family: Georgia;
-                background-color: #00000f;
-                margin-top: auto;
-            }
-        
-        </style>
-        
-    </head>
-    <body>
-        <header>MEHRCEEY CALENDAR APP</header>
-
-        </style>
-            <div>
-                <ul style="text-align: right">
-                    <a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
-                    <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
-                    <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>   
-                </ul>
-            </div>
-                <div id="clockStyle">
-                <span id="hour"></span>
-                <span>:</span>
-                <span id="minutes"></span>
-                <span>:</span>
-                <span id="seconds"></span>
-                <span>:</span>
-                <span id="meridien"></span>
-            </div>
-        
-        <script language="javascript">displayTime();</script>
-                    <select style="margin-left:30px" id = "getYear" name = "year" onChange = "refresh();"></select>
-                        <script type = "text/javascript">
-                            var min = 1900,
-                            max = 2100,
-                            select = document.getElementById('getYear');
-                            for (var i = min; i <= max; i ++){
-                            var opt = document.createElement('option');
-                            opt.value = i;
-                            opt.innerHTML = i;
-                            select.appendChild(opt);
-                            }
-                            select.value = new Date().getFullYear();
-                        </script>
-        
-                <button name = "previousYear" onClick = "setPreviousYear()" class='btn btn-success'>Prev. Year</button>
-                
-                <button name = "previousYear" onClick = "setNextYear()" class='btn btn-success'>Next Year</button>
-                
-        <div id = "yearlyCal" style = "margin-left: 200px;">
-            <script type = "text/javascript">refresh ();</script>
-        </div>
-    </body>
+  <head>
+    <title>Calendar Year</title>
+    <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
+    <script type = "text/javascript" src ="javascript/displayTime.js"></script>
+    <script type = "text/javascript" src ="javascript/calendaryear.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
+    <style>
+      table {
+        width: 230px; 
+        height: 220px;
+        margin: 5px;
+        padding: 10px 10px;
+      }
+      body {
+        background:url("images/mobile-design.jpg");
+        background-repeat: repeat-x repeat-y;
+        color: black;
+      }
+      header {
+        height: 70px;
+        width: 100%;
+        font-size: 55px;
+        color: white;
+        text-indent: 20px;
+        text-align: center;
+        font-family: Georgia;
+        background-color: #00000f;
+        margin-top: auto;
+      } 
+    </style>    
+  </head>
+  <body>
+    <header>MEHRCEEY CALENDAR APP</header>
+    <div>
+      <ul style="text-align: right">
+        <a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
+        <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
+        <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>   
+      </ul>
+    </div>
+    <div id="clockStyle">
+      <span id="hour"></span>
+      <span>:</span>
+      <span id="minutes"></span>
+      <span>:</span>
+      <span id="seconds"></span>
+      <span>:</span>
+      <span id="meridien"></span>
+    </div>
+    <script language="javascript">displayTime();</script>
+    <select style="margin-left:30px" id = "getYear" name = "year" onChange = "refresh();"></select>
+    <script type = "text/javascript">
+    var min = 1900,
+    max = 2100,
+    select = document.getElementById('getYear');
+    for (var i = min; i <= max; i ++){
+      var opt = document.createElement('option');
+      opt.value = i;
+      opt.innerHTML = i;
+      select.appendChild(opt);
+    }
+    select.value = new Date().getFullYear();
+    </script>
+    <button name = "previousYear" onClick = "setPreviousYear()" class='btn btn-success'>Prev. Year</button>
+    <button name = "previousYear" onClick = "setNextYear()" class='btn btn-success'>Next Year</button>       
+    <div id = "yearlyCal" style = "margin-left: 200px;">
+    <script type = "text/javascript">refresh ();</script>
+    </div>
+  </body>
 </html>

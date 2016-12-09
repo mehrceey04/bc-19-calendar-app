@@ -1,94 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Add Task</title>
-    	<link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
+  <head>
+    <title>Add Task</title>
+      <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
     	<link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
-        <style>
-            body {
-                background:url("images/mobile-design.jpg");
-                background-repeat: repeat-x repeat-y;
-            }
-        </style>
-    </head>
-    <body>
-    	 <header>MEHRCEEY CALENDAR APP</header>
-    		<div>
-        		<ul class = "nav nav-pills">
-        			<div><a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
-        <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
-        <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
+      <style>
+        body {
+          background:url("images/mobile-design.jpg");
+          background-repeat: repeat-x repeat-y;
+        }
+      </style>
+  </head>
+  <body>
+    <header>MEHRCEEY CALENDAR APP</header>
+    <div>
+      <ul class = "nav nav-pills">
+        <div><a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
+          <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
+          <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
         </div>
 
-                </ul>
-            </div>
-
-		<form class=form-2>
-    		<h2 style="color:black">My Tasks</h2>
-    		Title<br>
-    		<input type="text" id="user_input"><br>
-    		Description<br>
-			<textarea id="text-area" row="200" cols="40" id="user_input"></textarea><br><br><br>
+      </ul>
+    </div>
+    <form class=form-2>
+      <h2 style="color:black">My Tasks</h2>Title<br>
+    		<input type="text" id="user_input"><br>Description<br>
+        <textarea id="text-area" row="200" cols="40" id="user_input"></textarea><br><br><br>
 				START TIME:
 			<select>
-				<option value = 0>00:00</option> 
-                <option value = 1>01:00</option>
-                <option value = 2>02:00</option>
-                <option value = 3>03:00</option>  
-                <option value = 4>04:00</option>
-                <option value = 5>05:00</option>
-                <option value = 6>06:00</option>
-                <option value = 7>07:00</option>
-                <option value = 8>08:00</option>
-                <option value = 9>09:00</option>
-                <option value = 10>10:00</option>
-                <option value = 11>11:00</option>
-                <option value = 11>12:00</option>
-                <option value = 12>13:00</option>
-                <option value = 14>14:00</option>
-                <option value = 15>15:00</option>
-                <option value = 16>16:00</option>
-                <option value = 17>17:00</option>
-                <option value = 18>18:00</option>
-                <option value = 19>19:00</option>
-                <option value = 20>20:00</option>
-                <option value = 21>21:00</option>
-                <option value = 22>22:00</option>
-                <option value = 23>23:00</option>
-                </select>
-                END TIME:
-                <select><option value = 0>00:00</option>
-                <option value = 1>01:00</option>
-                <option value = 2>02:00</option>
-                <option value = 3>03:00</option>  
-                <option value = 4>04:00</option>
-                <option value = 5>05:00</option>
-                <option value = 6>06:00</option>
-                <option value = 7>07:00</option>
-                <option value = 8>08:00</option>
-                <option value = 9>09:00</option>
-                <option value = 10>10:00</option>
-                <option value = 11>11:00</option>
-                <option value = 11>12:00</option>
-                <option value = 12>13:00</option>
-                <option value = 14>14:00</option>
-                <option value = 15>15:00</option>
-                <option value = 16>16:00</option>
-                <option value = 17>17:00</option>
-                <option value = 18>18:00</option>
-                <option value = 19>19:00</option>
-                <option value = 20>20:00</option>
-                <option value = 21>21:00</option>
-                <option value = 22>22:00</option>
-                <option value = 23>23:00</option>
-                </select> <br><br><br><br>
-			<button id="submit" type="submit" class="btn btn-success">Add task</button>
-
-		      </form>
-
-        
-    </body>
-    <script type="text/javascript">
-    	console.log(localStorage.getItem('task_date'));
-    </script>
+			  <option value = 0>00:00</option> 
+        <option value = 1>01:00</option>
+        <option value = 2>02:00</option>
+        <option value = 3>03:00</option>  
+        <option value = 4>04:00</option>
+        <option value = 5>05:00</option>
+        <option value = 6>06:00</option>
+        <option value = 7>07:00</option>
+        <option value = 8>08:00</option>
+        <option value = 9>09:00</option>
+        <option value = 10>10:00</option>
+        <option value = 11>11:00</option>
+        <option value = 11>12:00</option>
+        <option value = 12>13:00</option>
+        <option value = 14>14:00</option>
+        <option value = 15>15:00</option>
+        <option value = 16>16:00</option>
+        <option value = 17>17:00</option>
+        <option value = 18>18:00</option>
+        <option value = 19>19:00</option>
+        <option value = 20>20:00</option>
+        <option value = 21>21:00</option>
+        <option value = 22>22:00</option>
+        <option value = 23>23:00</option>
+      </select>
+          END TIME:
+      <select>
+        <option value = 0>00:00</option>
+        <option value = 1>01:00</option>
+        <option value = 2>02:00</option>
+        <option value = 3>03:00</option>  
+        <option value = 4>04:00</option>
+        <option value = 5>05:00</option>
+        <option value = 6>06:00</option>
+        <option value = 7>07:00</option>
+        <option value = 8>08:00</option>
+        <option value = 9>09:00</option>
+        <option value = 10>10:00</option>
+        <option value = 11>11:00</option>
+        <option value = 11>12:00</option>
+        <option value = 12>13:00</option>
+        <option value = 14>14:00</option>
+        <option value = 15>15:00</option>
+        <option value = 16>16:00</option>
+        <option value = 17>17:00</option>
+        <option value = 18>18:00</option>
+        <option value = 19>19:00</option>
+        <option value = 20>20:00</option>
+        <option value = 21>21:00</option>
+        <option value = 22>22:00</option>
+        <option value = 23>23:00</option>
+      </select> <br><br><br><br>
+      <button id="submit" type="submit" class="btn btn-success">Add task</button>
+		</form>
+  </body>
+  <script type="text/javascript">
+    console.log(localStorage.getItem('task_date'));
+  </script>
 </html> 
