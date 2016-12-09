@@ -71,7 +71,7 @@ function selectDate() {
 function addTask(element) {
   var day = element.getAttribute('data')
   localStorage.setItem("task_date", day);
-  window.open('file:///C:/Users/HalimatMercy/bootcamp-projects/calendarApp/add-task.html')
+  window.open('./add-task.html')
 }
 
 function calendar(Month, Year) {
