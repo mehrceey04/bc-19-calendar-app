@@ -3,6 +3,7 @@
     <head>
         <title>Calendar Year</title>
         <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
+        <script type = "text/javascript" src ="javascript/displayTime.js"></script>
         <script type = "text/javascript" src ="javascript/calendaryear.js"></script>
         <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
         <style>
@@ -12,7 +13,11 @@
                 margin: 5px;
                 padding: 10px 10px;
             }
-
+        body {
+                background:url("images/mobile-design.jpg");
+                background-repeat: repeat-x repeat-y;
+                color: black;
+            }
             header {
                 height: 70px;
                 width: 100%;
@@ -28,8 +33,10 @@
         </style>
         
     </head>
-    <body style="background-color:#00000f;">
+    <body>
         <header>MEHRCEEY CALENDAR APP</header>
+
+        </style>
             <div>
                 <ul style="text-align: right">
                     <a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
@@ -37,7 +44,17 @@
                     <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>   
                 </ul>
             </div>
-                
+                <div id="clockStyle">
+                <span id="hour"></span>
+                <span>:</span>
+                <span id="minutes"></span>
+                <span>:</span>
+                <span id="seconds"></span>
+                <span>:</span>
+                <span id="meridien"></span>
+            </div>
+        
+        <script language="javascript">displayTime();</script>
                     <select style="margin-left:30px" id = "getYear" name = "year" onChange = "refresh();"></select>
                         <script type = "text/javascript">
                             var min = 1900,
