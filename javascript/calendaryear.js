@@ -94,36 +94,36 @@ function calendar(Month, Year) {
     } else {
     days_in_this_month = daysInAMonth[month];
     }
-  calendar_html = '<table style = "background-color:#ffffff;">';
-  calendar_html += '<tr style = "border: 2px solid black;"><td colspan = "7" style="background-color:#ffffff; color:#000000; text-align: center;">' +'<strong>' + months[month] + ' ' + year + '</strong>' + '</td></tr>';
-  calendar_html += '<tr style = "text-align: center ;"><td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thur</td><td>Fri</td><td>Sat</td></tr>';
-  calendar_html += '<tr>';
+  myCalendar = '<table style = "background-color:#ffffff;">';
+  myCalendar += '<tr style = "border: 2px solid black;"><td colspan = "7" style="background-color:#ffffff; color:#000000; text-align: center;">' +'<strong>' + months[month] + ' ' + year + '</strong>' + '</td></tr>';
+  myCalendar += '<tr style = "text-align: center ;"><td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thur</td><td>Fri</td><td>Sat</td></tr>';
+  myCalendar += '<tr>';
 
   // Fill the first week of the month with the appropriate number of blanks.
   for(week_day = 0; week_day < first_week_day; week_day++) {
-    calendar_html += '<td style = "background-color:9999cc; color:000000;"> </td>';
+    myCalendar += '<td style = "background-color:9999cc; color:000000;"> </td>';
   }
 
   week_day = first_week_day;
   for(day_counter = 1; day_counter <= days_in_this_month; day_counter++) {
     week_day %= 7;
     if(week_day == 0)
-      calendar_html += '</tr><tr>';
+      myCalendar += '</tr><tr>';
 
     // Highlight the current day.
     
     if(currentDate == day_counter && currentMonth == Month && currentYear == parseInt(Year))
-      calendar_html += '<td><b>' + day_counter + '</b></td>';
+      myCalendar += '<td><b>' + day_counter + '</b></td>';
     else
-      calendar_html += '<td> ' + day_counter + ' </td>';
+      myCalendar += '<td> ' + day_counter + ' </td>';
 
     week_day++;
   }
 
-  calendar_html += '</tr>';
-  calendar_html += '</table>';
+  myCalendar += '</tr>';
+  myCalendar += '</table>';
 
   // Display the calendar.
- return calendar_html;
+ return myCalendar;
 }
 

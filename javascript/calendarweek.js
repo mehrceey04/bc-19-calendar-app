@@ -52,7 +52,7 @@
         // two cells per hour
         for (var i = 0; i < 49; i++) {
             scheduleHTML += "<tr>" + 
-                                "<td style='background-color:#70C469; color:000000; text-align: center;'>" + Math.floor(i/2) + ":" + ((halfHour) ? "30" : "00") + "</td>";
+                                "<td style='background-color:#c83a50; color:000000; text-align: center;'>" + Math.floor(i/2) + ":" + ((halfHour) ? "30" : "00") + "</td>";
                 for (var j = 0; j < 7; j++) {
                     scheduleHTML += "<td style='background-color:white; color:000000; text-align: center;'></td>";
                 }

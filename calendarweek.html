@@ -17,6 +17,8 @@
         <!-- Bootstrap Timepicker -->
         <link href="bower_components/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet">        
         <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
+        <script type = "text/javascript" src = "javascript/displayTime.js"></script>
+
         <!--<style>
             body {
                 background:url("images/mobile-design.jpg");
@@ -28,11 +30,11 @@
                 height: 70px;
                 width: 100%;
                 font-size: 55px;
-                color: black;
+                color: white;
                 text-indent: 20px;
                 text-align: center;
                 font-family: Georgia;
-                background-color: #ffffff;
+                background-color: #00000f;
                 margin-top: auto;
             }
         </style>
@@ -47,6 +49,17 @@
                     </div>
                 </ul>
             </div>
+            <div id="clockStyle" style="color:white; margin-left:700px; margin-top:85px; font-size:35px">
+                <span id="hour"></span>
+                <span>:</span>
+                <span id="minutes"></span>
+                <span>:</span>
+                <span id="seconds"></span>
+                <span>:</span>
+                <span id="meridien"></span>
+            </div>
+        
+        <script language="javascript">displayTime();</script>
         <div class="container">
             <h3 style="color:white;">Week of <span id="week-title"></span></h3>
             <div style="padding-bottom:15px;">
