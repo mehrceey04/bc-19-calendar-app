@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Add Task</title>
-      <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
-    	<link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
-      <style>
-        body {
-          background:url("images/mobile-design.jpg");
-          background-repeat: repeat-x repeat-y;
-        }
-      </style>
-  </head>
-  <body>
-    <header>MEHRCEEY CALENDAR APP</header>
-    <div>
-      <ul class = "nav nav-pills">
-        <div><a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
-          <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
-          <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
-        </div>
 
-      </ul>
-    </div>
-    <form class=form-2>
-      <h2 style="color:black">My Tasks</h2>Title<br>
-    		<input type="text" id="user_input"><br>Description<br>
-        <textarea id="text-area" row="200" cols="40" id="user_input"></textarea><br><br><br>
-				START TIME:
-			<select>
+<head>
+  <title>Add Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+  <style>
+    body {
+      background: url("images/mobile-design.jpg");
+      background-repeat: repeat-x repeat-y;
+    }
+  </style>
+</head>
+
+<body>
+  <header>MEHRCEEY CALENDAR APP</header>
+  <div>
+    <ul class="nav nav-pills">
+      <div><a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
+        <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
+        <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
+      </div>
+
+    </ul>
+  </div>
+  <form class=form-2>
+    <h2 style="color:black">My Tasks</h2>Title<br>
+    <input type="text" id="user_input"><br>Description<br>
+    <textarea id="text-area" row="200" cols="40" id="user_input"></textarea><br><br><br> START TIME:
+    <select>
 			  <option value = 0>00:00</option> 
         <option value = 1>01:00</option>
         <option value = 2>02:00</option>
@@ -52,9 +55,8 @@
         <option value = 21>21:00</option>
         <option value = 22>22:00</option>
         <option value = 23>23:00</option>
-      </select>
-          END TIME:
-      <select>
+      </select> END TIME:
+    <select>
         <option value = 0>00:00</option>
         <option value = 1>01:00</option>
         <option value = 2>02:00</option>
@@ -80,11 +82,12 @@
         <option value = 22>22:00</option>
         <option value = 23>23:00</option>
       </select> <br><br><br><br>
-      <button id="submit" type="submit" class="btn btn-success">Add task</button>
-		</form>
+    <button id="submit" type="submit" class="btn btn-success">Add task</button>
+  </form>
   <footer>Mehrceey Calendar App --- https://twitter.com/@mehrceey04</footer>
-  </body>
-  <script type="text/javascript">
+</body>
+<script type="text/javascript">
     console.log(localStorage.getItem('task_date'));
   </script>
-</html> 
+
+</html>

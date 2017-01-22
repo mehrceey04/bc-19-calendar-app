@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Home page</title>
-    <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
-    <script type = "text/javascript" src = "javascript/displayTime.js"></script>
-    <script type = "text/javascript" src = "javascript/calendarmonth.js"></script>
-    <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
-    <style>
-      body {
-        background:url("images/mobile-design.jpg");
-        background-repeat: repeat-x repeat-y;
-        color: black;
-      }
-    </style>
-  </head>
-  <body onload="setToday()">
-    <header>MEHRCEEY CALENDAR APP</header>
-    <div>
-      <ul class = "nav nav-pills">
-        <div><a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
-          <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
-          <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
-          </div>
-      </ul>
-    </div>
-    <div class = "container">
-    </div>
-    <div id="clockStyle">
-      <span id="hour"></span>
-      <span>:</span>
-      <span id="minutes"></span>
-      <span>:</span>
-      <span id="seconds"></span>
-      <span>:</span>
-      <span id="meridien"></span>
-    </div>
-    <script language="javascript">displayTime();</script>
-    <div style = "width: 100%">
-      <table style="margin-left: 40px;" cellpadding = 0 cellspacing = 0 border = 0>
-        <tr><td colspan = 7>
-          <select id = "monthValue" NAME = "month" onChange = "refresh();">
+
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <script type="text/javascript" src="javascript/displayTime.js"></script>
+  <script type="text/javascript" src="javascript/calendarmonth.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+  <style>
+    body {
+      background: url("images/mobile-design.jpg");
+      background-repeat: repeat-x repeat-y;
+      color: black;
+    }
+  </style>
+</head>
+
+<body onload="setToday()">
+  <header>MEHRCEEY CALENDAR APP</header>
+  <div>
+    <ul class="nav nav-pills">
+      <div><a href="calendarweek.html" onclick="javascript:MoveView('day');" class='btn btn-success'>Day View</a>
+        <a href="index.html" onclick="javascript:MoveView('month');" class='btn btn-success'>Month View</a>
+        <a href="calendaryear.html" onclick="javascript:MoveView('week');" class='btn btn-success'>Year View</a>
+      </div>
+    </ul>
+  </div>
+  <div class="container">
+  </div>
+  <div id="clockStyle">
+    <span id="hour"></span>
+    <span>:</span>
+    <span id="minutes"></span>
+    <span>:</span>
+    <span id="seconds"></span>
+    <span>:</span>
+    <span id="meridien"></span>
+  </div>
+  <script language="javascript">displayTime();</script>
+  <div style="width: 100%">
+    <table style="margin-left: 40px;" cellpadding=0 cellspacing=0 border=0>
+      <tr>
+        <td colspan=7>
+          <select id="monthValue" NAME="month" onChange="refresh();">
             <option value = 0>JANUARY</option>
             <option value = 1>FEBRUARY</option>
             <option value = 2>MARCH</option>
@@ -53,11 +58,11 @@
             <option value = 10>NOVEMBER</option>
             <option value = 11>DECEMBER</option>
           </select>
-            </td>
-            <td>
-              <select id = "selectYear" name = "year" onChange = "refresh();"></select>
-            </td>
-            <script type = "text/javascript">
+        </td>
+        <td>
+          <select id="selectYear" name="year" onChange="refresh();"></select>
+        </td>
+        <script type="text/javascript">
               var min = 1900,
               max = 2100,
               yearValue = document.getElementById('selectYear');
@@ -68,19 +73,20 @@
                 yearValue.appendChild(opt);
               }
               yearValue.value = new Date().getFullYear();
-            </script>         
-        </tr>
-      </table>
-    </div>
-    <div id = "date_nav">
-      <button name = "previousYear" onClick = "setPreviousYear()" class="btn btn-success">Prev. Year</button>
-      <button name = "previousYear" onClick = "setPreviousMonth()" class="btn btn-success">Prev. Month</button>
-      <button name = "previousYear" onClick = "setToday()" class="btn btn-success">Today</button>
-      <button name = "previousYear" onClick = "setNextMonth()" class="btn btn-success">Next Month</button>
-      <button name = "previousYear" onClick = "setNextYear()" class="btn btn-success">Next Year</button>
-    </div>
-    <div id = "reload"></div>
-    <script type = "text/javascript">selectDate();</script> 
-    <footer>Mehrceey Calendar App --- https://twitter.com/@mehrceey04</footer>
-  </body>
+            </script>
+      </tr>
+    </table>
+  </div>
+  <div id="date_nav">
+    <button name="previousYear" onClick="setPreviousYear()" class="btn btn-success">Prev. Year</button>
+    <button name="previousYear" onClick="setPreviousMonth()" class="btn btn-success">Prev. Month</button>
+    <button name="previousYear" onClick="setToday()" class="btn btn-success">Today</button>
+    <button name="previousYear" onClick="setNextMonth()" class="btn btn-success">Next Month</button>
+    <button name="previousYear" onClick="setNextYear()" class="btn btn-success">Next Year</button>
+  </div>
+  <div id="reload"></div>
+  <script type="text/javascript">selectDate();</script>
+  <footer>Mehrceey Calendar App --- https://twitter.com/@mehrceey04</footer>
+</body>
+
 </html>
